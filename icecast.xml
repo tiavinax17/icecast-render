@@ -6,8 +6,8 @@
 
   <authentication>
     <admin-user>admin</admin-user>
-    <admin-password>test</admin-password>
-    <source-password>test</source-password>
+    <admin-password>TON_MDP_ADMIN</admin-password>
+    <source-password>TON_MDP_SOURCE</source-password>
   </authentication>
 
   <hostname>0.0.0.0</hostname>
@@ -16,4 +16,13 @@
   </listen-socket>
 
   <fileserve>1</fileserve>
+
+  <paths>
+    <logdir>/var/log/icecast2</logdir>
+    <webroot>/usr/share/icecast2/web</webroot>
+    <adminroot>/usr/share/icecast2/admin</adminroot>
+  </paths>
+
+  <!-- IMPORTANT -->
+  <changeowner>icecast</changeowner>
 </icecast>
