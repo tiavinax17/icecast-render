@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Étape 3 : Crée un utilisateur non-root pour exécuter Icecast
-RUN useradd -m icecast && mkdir -p /etc/icecast2 && chown -R icecast:icecast /etc/icecast2
+RUN useradd -m -g icecast icecast || true && mkdir -p /etc/icecast2 && chown -R icecast:icecast /etc/icecast2
 
 # Étape 4 : Copie ta configuration
 COPY icecast.xml /etc/icecast2/icecast.xml
