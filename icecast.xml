@@ -23,6 +23,7 @@
     <adminroot>/usr/share/icecast2/admin</adminroot>
   </paths>
 
-  <!-- IMPORTANT -->
   <changeowner>icecast</changeowner>
+<admin>tonemail@example.com</admin>
+<location>Madagascar</location>
 </icecast>
